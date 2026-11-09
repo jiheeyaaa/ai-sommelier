@@ -1,4 +1,10 @@
+from pathlib import Path
 import streamlit as st
+
+BASE_DIR = Path(__file__).resolve().parent
+LOGO_PATH = BASE_DIR / "logo.svg"
+
+st.image(str(LOGO_PATH))
 
 st.markdown("""
 <style>
@@ -18,7 +24,6 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.image("static/logo.svg")
 st.markdown("""
     <div class='txtWrap'>
         <h3>당신의 특별한 순간을 위한 와인을 찾아드립니다.</h3>
